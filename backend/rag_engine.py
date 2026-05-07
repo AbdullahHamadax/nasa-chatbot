@@ -4,10 +4,11 @@ RAG (Retrieval-Augmented Generation) Engine for the NASA C-MAPSS Chatbot.
 Pipeline:
   1. RETRIEVAL  — TF-IDF + cosine similarity to find relevant documents
   2. AUGMENT    — Build prompt with JARVIS system prompt + retrieved context
-  3. GENERATE   — Google Gemini LLM generates natural-language answer
+  3. GENERATE   — Groq LLM (Llama 3.3 70B) generates natural-language answer
 """
 
 import os
+import random
 import re
 from pathlib import Path
 from typing import Optional
@@ -221,7 +222,7 @@ class Document:
 # ── Intent recognition ──────────────────────────────────────────────
 INTENT_PATTERNS = {
     "engine_specific": [
-        re.compile(r"engine\s*(?:#?\s*)?(\d+)", re.I),
+        re.compile(r"engine\s*(?:#?\s*)(\d+)", re.I),
         re.compile(r"engine\s+id\s*:?\s*(\d+)", re.I),
     ],
     "fleet_overview": [
@@ -281,6 +282,8 @@ INTENT_PATTERNS = {
 }
 
 
+
+
 def detect_intent(query: str) -> tuple[str, dict]:
     """Detect the user's intent and extract parameters."""
     params = {}
@@ -307,53 +310,69 @@ def detect_intent(query: str) -> tuple[str, dict]:
 
 
 # ── Gemini LLM Client ──────────────────────────────────────────────
-class GeminiClient:
-    """Wrapper around Google Gemini API for text generation."""
+# ── Groq LLM Client (Llama 3.3 70B) ────────────────────────────────
+class GroqClient:
+    """Wrapper around Groq API for fast LLM inference with Llama 3.3."""
 
     def __init__(self):
-        self.model = None
+        self.client = None
         self.available = False
+        self.model = "llama-3.3-70b-versatile"
         self._init()
 
     def _init(self):
-        api_key = os.getenv("GEMINI_API_KEY", "")
+        api_key = os.getenv("GROQ_API_KEY", "")
         if not api_key or api_key == "your_api_key_here":
-            print("[LLM] No Gemini API key found. Set GEMINI_API_KEY in .env")
-            print("[LLM] Get a free key at: https://aistudio.google.com/apikey")
+            print("[LLM] No Groq API key found. Set GROQ_API_KEY in .env")
+            print("[LLM] Get a free key at: https://console.groq.com/keys")
             return
 
         try:
-            import google.generativeai as genai
-            genai.configure(api_key=api_key)
-            self.model = genai.GenerativeModel(
-                "gemini-2.0-flash",
-                system_instruction=SYSTEM_PROMPT,
-            )
+            from groq import Groq
+            self.client = Groq(api_key=api_key)
             self.available = True
-            print("[LLM] Gemini model initialized successfully")
+            print(f"[LLM] Groq client initialized (model: {self.model})")
         except Exception as e:
-            print(f"[LLM] Failed to initialize Gemini: {e}")
+            print(f"[LLM] Failed to initialize Groq: {e}")
 
     def generate(self, prompt: str) -> str:
-        """Generate a response from Gemini."""
-        if not self.available or not self.model:
+        """Generate a response from Groq."""
+        if not self.available or not self.client:
             return ""
         try:
-            response = self.model.generate_content(prompt)
-            return response.text
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": prompt},
+                ],
+                temperature=0.3,
+                max_tokens=4096,
+            )
+            return response.choices[0].message.content or ""
         except Exception as e:
             print(f"[LLM] Generation error: {e}")
             return ""
 
     def generate_stream(self, prompt: str):
-        """Stream a response from Gemini, yielding chunks."""
-        if not self.available or not self.model:
+        """Stream a response from Groq, yielding chunks."""
+        if not self.available or not self.client:
             return
         try:
-            response = self.model.generate_content(prompt, stream=True)
-            for chunk in response:
-                if chunk.text:
-                    yield chunk.text
+            stream = self.client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": prompt},
+                ],
+                temperature=0.3,
+                max_tokens=1024,
+                stream=True,
+            )
+            for chunk in stream:
+                text = chunk.choices[0].delta.content
+                if text:
+                    yield text
         except Exception as e:
             print(f"[LLM] Stream error: {e}")
 
@@ -365,7 +384,7 @@ class RAGEngine:
 
     - Uses TF-IDF vectorization for document embeddings
     - Cosine similarity for retrieval
-    - Google Gemini LLM for generation with JARVIS persona
+    - Groq LLM (Llama 3.3 70B) for generation with JARVIS persona
     - Falls back to rule-based generation if LLM is unavailable
     """
 
@@ -374,7 +393,7 @@ class RAGEngine:
         self.vectorizer: Optional[TfidfVectorizer] = None
         self.tfidf_matrix = None
         self.ready = False
-        self.llm = GeminiClient()
+        self.llm = GroqClient()
 
     def load_documents(self):
         """Load all processed documents from disk."""
@@ -495,7 +514,7 @@ class RAGEngine:
             if params.get("subset") and params["subset"] in doc.content:
                 boosted[i] *= 1.5
 
-            # Specific engine ID boost
+            # Specific engine ID boost + demote wrong engines
             if params.get("engine_id"):
                 eid = params["engine_id"]
                 padded = eid.zfill(3)
@@ -503,6 +522,9 @@ class RAGEngine:
                     boosted[i] *= 15.0
                 elif re.search(rf"Engine\s*(ID)?\s*:?\s*{eid}\b", doc.content):
                     boosted[i] *= 5.0
+                elif doc.category == "engine_summary":
+                    # Aggressively demote OTHER engine docs
+                    boosted[i] *= 0.01
 
             # Fleet summary boost for overview queries
             if doc.source == "fleet_summary_all.txt" and intent == "fleet_overview":
@@ -629,51 +651,56 @@ IMPORTANT RULES:
 - Do NOT repeat raw document headings or ASCII separators (===, ---).
 - Use only ONE Markdown heading per answer.
 - For health reports, show only 5 key sensors (2, 3, 4, 11, 15) unless the user asks for all sensors.
-- Keep normal answers under 250 words.
+- For fleet status, alerts, or critical engine lists: ALWAYS list ALL engines. Never truncate or summarize with "and X more".
+- Keep explanatory text concise, but never cut data lists short.
 - Always end health reports with a short conclusion.
 - Respond as JARVIS following your system instructions."""
 
         return prompt
 
-    # ── GENERATE: LLM or fallback ───────────────────────────────────
+    # ── GENERATE: LLM-first, always ──────────────────────────────────
 
     def generate(self, query: str, retrieved: list[tuple[Document, float]],
                  intent: str, params: dict) -> str:
         """
-        GENERATION step: use LLM to generate answer from retrieved context.
-        Falls back to rule-based if LLM is unavailable.
+        GENERATION step: ALWAYS try the LLM first.
+        - With retrieved docs: builds augmented prompt with context
+        - Without retrieved docs: sends query directly (LLM uses system prompt
+          to handle greetings, off-topic, typos, etc. naturally)
+        - Falls back to rule-based ONLY if LLM is unavailable
         """
-        if not retrieved:
-            return (
-                "🔍 I've scanned the entire C-MAPSS database, sir, but couldn't "
-                "find relevant data for that query. Could you rephrase? I can help "
-                "with engine health, fleet status, alerts, sensors, RUL, and "
-                "turbofan fundamentals. 🛩️"
-            )
-
-        # Try LLM generation first
         if self.llm.available:
-            prompt = self._build_prompt(query, retrieved)
+            if retrieved:
+                prompt = self._build_prompt(query, retrieved)
+            else:
+                # No context — let the LLM handle with system prompt alone
+                prompt = f"USER QUESTION: {query}\n\nRespond as JARVIS following your system instructions."
             answer = self.llm.generate(prompt)
             if answer:
                 return answer
 
-        # Fallback: rule-based generation
-        return self._fallback_generate(query, retrieved, intent, params)
+        # ── LLM unavailable fallback ──
+        if retrieved:
+            return self._fallback_generate(query, retrieved, intent, params)
+
+        # LLM unavailable AND no retrieved docs
+        return (
+            "I'm having trouble processing that request, sir. My language systems "
+            "are currently limited. Try asking about engine health, fleet status, "
+            "alerts, sensors, RUL, or turbofan fundamentals. 🛩️"
+        )
 
     def generate_stream(self, query: str,
                         retrieved: list[tuple[Document, float]]):
         """
-        Stream generation — yields text chunks from the LLM.
-        Falls back to word-by-word from rule-based if LLM unavailable.
+        Stream generation — ALWAYS tries LLM first.
+        Falls back to rule-based if LLM unavailable.
         """
-        if not retrieved:
-            yield ("🔍 I've scanned the entire C-MAPSS database, sir, but couldn't "
-                   "find relevant data for that query. Could you rephrase?")
-            return
-
         if self.llm.available:
-            prompt = self._build_prompt(query, retrieved)
+            if retrieved:
+                prompt = self._build_prompt(query, retrieved)
+            else:
+                prompt = f"USER QUESTION: {query}\n\nRespond as JARVIS following your system instructions."
             yielded_any = False
             for chunk in self.llm.generate_stream(prompt):
                 yielded_any = True
@@ -681,10 +708,19 @@ IMPORTANT RULES:
             if yielded_any:
                 return
 
-        # Fallback: yield the full rule-based response
-        intent, params = detect_intent(query)
-        answer = self._fallback_generate(query, retrieved, intent, params)
-        yield answer
+        # ── LLM unavailable fallback ──
+        if retrieved:
+            intent, params = detect_intent(query)
+            answer = self._fallback_generate(query, retrieved, intent, params)
+            yield answer
+            return
+
+        # LLM unavailable AND no docs
+        yield (
+            "I'm having trouble processing that request, sir. My language systems "
+            "are currently limited. Try asking about engine health, fleet status, "
+            "alerts, sensors, RUL, or turbofan fundamentals. 🛩️"
+        )
 
     # ── Fallback rule-based generation ──────────────────────────────
 
@@ -747,16 +783,16 @@ IMPORTANT RULES:
     def query(self, user_query: str) -> dict:
         """
         Full RAG pipeline: detect intent -> retrieve -> generate.
-        Returns dict with answer and metadata.
+        LLM handles ALL queries — no hardcoded shortcuts.
         """
         # 1. Intent detection
         intent, params = detect_intent(user_query)
 
-        # 2. Retrieval
+        # 2. Retrieval (may return empty for greetings/off-topic — that's fine)
         retrieved = self.retrieve(user_query, top_k=5,
                                   intent=intent, params=params)
 
-        # 3. Generation (LLM with fallback)
+        # 3. Generation — LLM handles everything (with or without context)
         answer = self.generate(user_query, retrieved, intent, params)
 
         # Metadata
@@ -778,6 +814,7 @@ IMPORTANT RULES:
     def query_stream(self, user_query: str):
         """
         Streaming RAG pipeline — yields (event_type, data) tuples.
+        LLM handles ALL queries — no hardcoded shortcuts.
         """
         # 1. Intent detection
         intent, params = detect_intent(user_query)
@@ -800,8 +837,9 @@ IMPORTANT RULES:
             "llm_used": self.llm.available,
         })
 
-        # 3. Stream generation
+        # 3. Stream generation — LLM handles everything
         for chunk in self.generate_stream(user_query, retrieved):
             yield ("chunk", chunk)
 
         yield ("done", None)
+

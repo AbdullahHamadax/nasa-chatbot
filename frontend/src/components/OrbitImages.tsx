@@ -103,18 +103,36 @@ export default function OrbitImages({
         height: radiusY * 2 * Math.cos((tilt * Math.PI) / 180) + itemSize,
       }}
     >
-      {/* Orbit path */}
-      {showOrbitPath && (
-        <div
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
-          style={{
-            width: radiusX * 2,
-            height: radiusY * 2,
-            border: "1px solid rgba(0, 180, 255, 0.07)",
-            transform: `translate(-50%, -50%) rotateX(${tilt}deg)`,
-          }}
-        />
-      )}
+      {/* Orbit path — SVG ellipse using same math as planet positions */}
+      {showOrbitPath && (() => {
+        const tiltRad = (tilt * Math.PI) / 180;
+        const visualRadiusY = radiusY * Math.cos(tiltRad);
+        const containerW = radiusX * 2 + itemSize;
+        const containerH = radiusY * 2 * Math.cos(tiltRad) + itemSize;
+        return (
+          <svg
+            style={{
+              position: "absolute",
+              left: 0,
+              top: 0,
+              width: containerW,
+              height: containerH,
+              pointerEvents: "none",
+              overflow: "visible",
+            }}
+          >
+            <ellipse
+              cx={containerW / 2}
+              cy={containerH / 2}
+              rx={radiusX}
+              ry={visualRadiusY}
+              fill="none"
+              stroke="rgba(255, 255, 255, 0.2)"
+              strokeWidth={1}
+            />
+          </svg>
+        );
+      })()}
 
       {/* Center content */}
       {centerContent && (
@@ -149,6 +167,7 @@ export default function OrbitImages({
               opacity,
               zIndex: Math.round(normalizedZ * 40),
               transition: "opacity 0.1s linear",
+              pointerEvents: "auto",
             }}
           >
             {typeof item.content === "string" ? (
