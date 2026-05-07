@@ -1,0 +1,21 @@
+# Environment variables (API keys)
+backend/.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Node modules
+frontend/node_modules/
+
+# Build outputs
+frontend/dist/
+
+# Vite cache
+frontend/.vite/
+
+# OS files
+.DS_Store
+Thumbs.db
