@@ -1,0 +1,35 @@
+ENGINE HEALTH REPORT — FD002 Dataset
+==================================================
+Engine ID      : 185
+Dataset        : FD002 (HPC Degradation)
+Op. Conditions : 6
+Cycles Recorded: 254
+RUL (Remaining): 19 cycles
+Health Status  : DEGRADED
+Risk Level     : HIGH
+
+SENSOR READINGS & TRENDS (Last 30 Cycles)
+--------------------------------------------------
+  Sensor  2 (T24        — Total temperature at LPC outlet): 642.94 °R | Trend: Rising ↑ ALERT (+19.8%)
+  Sensor  3 (T30        — Total temperature at HPC outlet): 1599.68 °R | Trend: Rising ↑ ALERT (+27.1%)
+  Sensor  4 (T50        — Total temperature at LPT outlet): 1417.19 °R | Trend: Rising ↑ ALERT (+35.2%)
+  Sensor  7 (P30        — Total pressure at HPC outlet): 551.99 psia | Trend: Rising ↑ ALERT (+215.2%)
+  Sensor  8 (Nf         — Physical fan speed): 2388.10 rpm | Trend: Rising ↑ ALERT (+24.6%)
+  Sensor  9 (Nc         — Physical core speed): 9154.16 rpm | Trend: Rising ↑ ALERT (+13.7%)
+  Sensor 11 (Ps30       — Static pressure at HPC outlet): 47.97 psia | Trend: Rising ↑ ALERT (+30.5%)
+  Sensor 12 (phi        — Ratio of fuel flow to Ps30): 520.81 pps/psi | Trend: Rising ↑ ALERT (+217.5%)
+  Sensor 13 (NRf        — Corrected fan speed): 2388.15 rpm | Trend: Rising ↑ ALERT (+17.7%)
+  Sensor 14 (NRc        — Corrected core speed): 8213.84 rpm | Trend: Rising ↑ ALERT (+3.8%)
+  Sensor 15 (BPR        — Bypass Ratio): 8.52 — | Trend: Declining ↓ ALERT (-21.7%)
+  Sensor 17 (htBleed    — Bleed Enthalpy): 397.00 — | Trend: Rising ↑ ALERT (+29.7%)
+  Sensor 20 (W31        — HPT coolant bleed): 38.32 lbm/s | Trend: Rising ↑ ALERT (+165.7%)
+  Sensor 21 (W32        — LPT coolant bleed): 23.09 lbm/s | Trend: Rising ↑ ALERT (+170.2%)
+
+⚠️  MAINTENANCE: Schedule inspection within 10 cycles.
+   Engine 185 shows advancing degradation.
+
+OPERATING CONDITIONS (Latest Cycle)
+--------------------------------------------------
+  Setting 1 (Altitude)               : 0.0008
+  Setting 2 (Mach Number)             : 0.0000
+  Setting 3 (Throttle Resolver Angle) : 100.0000

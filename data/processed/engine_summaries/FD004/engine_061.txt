@@ -1,0 +1,34 @@
+ENGINE HEALTH REPORT — FD004 Dataset
+==================================================
+Engine ID      : 61
+Dataset        : FD004 (HPC Degradation + Fan Degradation)
+Op. Conditions : 6
+Cycles Recorded: 396
+RUL (Remaining): 51 cycles
+Health Status  : WATCH
+Risk Level     : MEDIUM
+
+SENSOR READINGS & TRENDS (Last 30 Cycles)
+--------------------------------------------------
+  Sensor  2 (T24        — Total temperature at LPC outlet): 555.80 °R | Trend: Stable (+0.0%)
+  Sensor  3 (T30        — Total temperature at HPC outlet): 1370.75 °R | Trend: Stable (+0.3%)
+  Sensor  4 (T50        — Total temperature at LPT outlet): 1131.16 °R | Trend: Stable (+0.3%)
+  Sensor  7 (P30        — Total pressure at HPC outlet): 197.63 psia | Trend: Stable (+0.2%)
+  Sensor  8 (Nf         — Physical fan speed): 2223.39 rpm | Trend: Stable (+0.0%)
+  Sensor  9 (Nc         — Physical core speed): 8385.87 rpm | Trend: Stable (+0.2%)
+  Sensor 11 (Ps30       — Static pressure at HPC outlet): 42.05 psia | Trend: Stable (+0.1%)
+  Sensor 12 (phi        — Ratio of fuel flow to Ps30): 186.67 pps/psi | Trend: Stable (+0.4%)
+  Sensor 13 (NRf        — Corrected fan speed): 2388.53 rpm | Trend: Stable (+0.0%)
+  Sensor 14 (NRc        — Corrected core speed): 8105.55 rpm | Trend: Stable (+0.2%)
+  Sensor 15 (BPR        — Bypass Ratio): 9.15 — | Trend: Stable (-0.3%)
+  Sensor 17 (htBleed    — Bleed Enthalpy): 336.00 — | Trend: Stable (+0.3%)
+  Sensor 20 (W31        — HPT coolant bleed): 15.08 lbm/s | Trend: Declining ↓ (-1.5%)
+  Sensor 21 (W32        — LPT coolant bleed): 9.03 lbm/s | Trend: Declining ↓ (-1.3%)
+
+📋 MAINTENANCE: Monitor closely. Schedule next routine check.
+
+OPERATING CONDITIONS (Latest Cycle)
+--------------------------------------------------
+  Setting 1 (Altitude)               : 35.0030
+  Setting 2 (Mach Number)             : 0.8400
+  Setting 3 (Throttle Resolver Angle) : 100.0000

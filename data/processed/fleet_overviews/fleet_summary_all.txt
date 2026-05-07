@@ -1,0 +1,50 @@
+FLEET-WIDE STATUS SUMMARY — ALL DATASETS
+==================================================
+Source: NASA C-MAPSS Test Data (real RUL values)
+
+FD001 — HPC Degradation | 1 operating condition(s)
+  Total Engines : 100
+  🔴 CRITICAL   : 10 engines
+     → Engine 31 (RUL=8), Engine 34 (RUL=7), Engine 35 (RUL=11), Engine 42 (RUL=10), Engine 56 (RUL=15), Engine 66 (RUL=14), Engine 68 (RUL=8), Engine 76 (RUL=10), Engine 81 (RUL=8), Engine 82 (RUL=9)
+  🟠 DEGRADED   : 18 engines
+     → Engine 18 (RUL=28), Engine 20 (RUL=16), Engine 24 (RUL=20), Engine 36 (RUL=19), Engine 37 (RUL=21), Engine 40 (RUL=28), Engine 41 (RUL=18), Engine 49 (RUL=21), Engine 52 (RUL=29), Engine 53 (RUL=26), Engine 58 (RUL=37), Engine 61 (RUL=21), Engine 64 (RUL=28), Engine 77 (RUL=34), Engine 90 (RUL=28), Engine 91 (RUL=38), Engine 92 (RUL=20), Engine 100 (RUL=20)
+  🟡 WATCH      : 17 engines
+  🟢 HEALTHY    : 55 engines
+
+FD002 — HPC Degradation | 6 operating condition(s)
+  Total Engines : 259
+  🔴 CRITICAL   : 46 engines
+     → Engine 5 (RUL=15), Engine 7 (RUL=6), Engine 9 (RUL=11), Engine 11 (RUL=6), Engine 14 (RUL=11), Engine 22 (RUL=10), Engine 32 (RUL=11), Engine 44 (RUL=6), Engine 45 (RUL=15), Engine 48 (RUL=13), Engine 50 (RUL=13), Engine 64 (RUL=14), Engine 65 (RUL=11), Engine 80 (RUL=15), Engine 90 (RUL=8), Engine 91 (RUL=9), Engine 99 (RUL=9), Engine 100 (RUL=14), Engine 102 (RUL=8), Engine 103 (RUL=8), Engine 111 (RUL=9), Engine 116 (RUL=7), Engine 120 (RUL=15), Engine 124 (RUL=7), Engine 134 (RUL=9), Engine 138 (RUL=7), Engine 146 (RUL=10), Engine 148 (RUL=11), Engine 158 (RUL=15), Engine 159 (RUL=9), Engine 161 (RUL=13), Engine 164 (RUL=14), Engine 173 (RUL=14), Engine 177 (RUL=6), Engine 182 (RUL=14), Engine 186 (RUL=10), Engine 190 (RUL=12), Engine 192 (RUL=13), Engine 208 (RUL=8), Engine 210 (RUL=8), Engine 211 (RUL=6), Engine 225 (RUL=11), Engine 227 (RUL=14), Engine 231 (RUL=8), Engine 236 (RUL=12), Engine 252 (RUL=12)
+  🟠 DEGRADED   : 29 engines
+     → Engine 1 (RUL=18), Engine 13 (RUL=30), Engine 15 (RUL=37), Engine 19 (RUL=22), Engine 40 (RUL=37), Engine 42 (RUL=27), Engine 43 (RUL=18), Engine 58 (RUL=26), Engine 62 (RUL=39), Engine 63 (RUL=39), Engine 70 (RUL=17), Engine 76 (RUL=36), Engine 84 (RUL=17), Engine 87 (RUL=21), Engine 97 (RUL=31), Engine 109 (RUL=35), Engine 132 (RUL=39), Engine 133 (RUL=38), Engine 150 (RUL=34), Engine 171 (RUL=36), Engine 176 (RUL=23), Engine 179 (RUL=35), Engine 185 (RUL=19), Engine 193 (RUL=37), Engine 198 (RUL=32), Engine 209 (RUL=23), Engine 242 (RUL=17), Engine 245 (RUL=16), Engine 250 (RUL=23)
+  🟡 WATCH      : 55 engines
+  🟢 HEALTHY    : 129 engines
+
+FD003 — HPC Degradation + Fan Degradation | 1 operating condition(s)
+  Total Engines : 100
+  🔴 CRITICAL   : 10 engines
+     → Engine 24 (RUL=9), Engine 26 (RUL=11), Engine 39 (RUL=8), Engine 46 (RUL=7), Engine 50 (RUL=11), Engine 81 (RUL=15), Engine 82 (RUL=6), Engine 92 (RUL=14), Engine 94 (RUL=10), Engine 99 (RUL=8)
+  🟠 DEGRADED   : 13 engines
+     → Engine 3 (RUL=27), Engine 14 (RUL=31), Engine 21 (RUL=18), Engine 38 (RUL=22), Engine 58 (RUL=40), Engine 64 (RUL=28), Engine 71 (RUL=35), Engine 76 (RUL=27), Engine 78 (RUL=20), Engine 79 (RUL=18), Engine 86 (RUL=25), Engine 98 (RUL=17), Engine 100 (RUL=28)
+  🟡 WATCH      : 30 engines
+  🟢 HEALTHY    : 47 engines
+
+FD004 — HPC Degradation + Fan Degradation | 6 operating condition(s)
+  Total Engines : 248
+  🔴 CRITICAL   : 36 engines
+     → Engine 8 (RUL=14), Engine 12 (RUL=7), Engine 15 (RUL=12), Engine 22 (RUL=11), Engine 31 (RUL=6), Engine 38 (RUL=11), Engine 40 (RUL=10), Engine 58 (RUL=8), Engine 65 (RUL=12), Engine 69 (RUL=12), Engine 71 (RUL=15), Engine 82 (RUL=10), Engine 100 (RUL=7), Engine 101 (RUL=13), Engine 103 (RUL=9), Engine 113 (RUL=13), Engine 114 (RUL=14), Engine 116 (RUL=13), Engine 118 (RUL=8), Engine 126 (RUL=15), Engine 135 (RUL=7), Engine 155 (RUL=7), Engine 158 (RUL=6), Engine 172 (RUL=12), Engine 173 (RUL=8), Engine 174 (RUL=10), Engine 177 (RUL=12), Engine 179 (RUL=12), Engine 183 (RUL=15), Engine 184 (RUL=10), Engine 194 (RUL=15), Engine 198 (RUL=11), Engine 202 (RUL=13), Engine 209 (RUL=11), Engine 213 (RUL=14), Engine 224 (RUL=14)
+  🟠 DEGRADED   : 33 engines
+     → Engine 1 (RUL=22), Engine 2 (RUL=39), Engine 23 (RUL=26), Engine 25 (RUL=39), Engine 32 (RUL=22), Engine 35 (RUL=36), Engine 42 (RUL=30), Engine 47 (RUL=34), Engine 49 (RUL=24), Engine 62 (RUL=33), Engine 70 (RUL=33), Engine 73 (RUL=23), Engine 77 (RUL=25), Engine 99 (RUL=37), Engine 102 (RUL=22), Engine 111 (RUL=18), Engine 123 (RUL=23), Engine 134 (RUL=36), Engine 151 (RUL=31), Engine 154 (RUL=34), Engine 159 (RUL=22), Engine 180 (RUL=32), Engine 181 (RUL=37), Engine 187 (RUL=24), Engine 197 (RUL=36), Engine 216 (RUL=17), Engine 222 (RUL=39), Engine 231 (RUL=33), Engine 235 (RUL=24), Engine 237 (RUL=18), Engine 238 (RUL=16), Engine 244 (RUL=35), Engine 248 (RUL=26)
+  🟡 WATCH      : 44 engines
+  🟢 HEALTHY    : 135 engines
+
+FLEET-WIDE TOTALS
+--------------------------------------------------
+Total Engines  : 707
+🔴 CRITICAL    : 102 engines — GROUND IMMEDIATELY
+🟠 DEGRADED    : 93 engines — Schedule inspection
+🟡 WATCH       : 146 engines — Monitor closely
+🟢 HEALTHY     : 366 engines — Normal operation
+
+Fleet Health Score: 51.8% healthy
+Engines needing action: 195 (27.6%)

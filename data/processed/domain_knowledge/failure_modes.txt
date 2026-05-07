@@ -1,0 +1,40 @@
+ENGINE FAILURE MODES AND DEGRADATION PATTERNS
+==================================================
+
+1. HPC (High Pressure Compressor) DEGRADATION
+   Present in: FD001, FD002, FD003, FD004
+   What happens: HPC efficiency and flow capacity gradually decrease.
+   Root cause: Blade tip erosion, fouling, or seal wear in the compressor.
+
+   Detectable symptoms:
+   - Sensor 3  (T30)  : Temperature RISES as compressor works harder
+   - Sensor 7  (P30)  : Pressure DROPS as compressor loses effectiveness
+   - Sensor 11 (Ps30) : Static pressure DROPS
+   - Sensor 12 (phi)  : Fuel-flow ratio INCREASES (burning more fuel for same output)
+   - Sensor 15 (BPR)  : DECREASES as core flow changes
+   - Sensor 9  (Nc)   : Core speed may INCREASE to compensate
+
+   Typical progression:
+   - Early   (RUL > 100) : Subtle changes, hard to detect
+   - Mid     (RUL 40-100): Clear trends visible in T30, P30, phi
+   - Late    (RUL < 40)  : Rapid deterioration, multiple sensors alarming
+   - Critical (RUL < 15) : Imminent failure, ground immediately
+
+2. FAN DEGRADATION
+   Present in: FD003, FD004
+   What happens: Fan blade efficiency decreases.
+   Root cause: Foreign object damage (FOD), erosion, blade tip rub.
+
+   Detectable symptoms:
+   - Sensor 8  (Nf) : Fan speed changes
+   - Sensor 15 (BPR): Bypass ratio shifts
+   - Sensor 2  (T24): LPC outlet temperature changes
+
+3. COMBINED HPC + FAN DEGRADATION (FD003, FD004)
+   Both degradation modes progress simultaneously or sequentially.
+
+MAINTENANCE THRESHOLDS:
+- RUL > 80  cycles : HEALTHY  — Normal scheduled maintenance
+- RUL 40-80 cycles : WATCH    — Increase monitoring frequency
+- RUL 15-40 cycles : DEGRADED — Schedule inspection within 10 cycles
+- RUL < 15  cycles : CRITICAL — Ground engine, immediate inspection

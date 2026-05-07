@@ -1,0 +1,36 @@
+ENGINE HEALTH REPORT — FD004 Dataset
+==================================================
+Engine ID      : 12
+Dataset        : FD004 (HPC Degradation + Fan Degradation)
+Op. Conditions : 6
+Cycles Recorded: 270
+RUL (Remaining): 7 cycles
+Health Status  : CRITICAL
+Risk Level     : CRITICAL
+
+SENSOR READINGS & TRENDS (Last 30 Cycles)
+--------------------------------------------------
+  Sensor  2 (T24        — Total temperature at LPC outlet): 549.96 °R | Trend: Declining ↓ (-1.0%)
+  Sensor  3 (T30        — Total temperature at HPC outlet): 1366.18 °R | Trend: Stable (+0.3%)
+  Sensor  4 (T50        — Total temperature at LPT outlet): 1140.42 °R | Trend: Rising ↑ (+1.1%)
+  Sensor  7 (P30        — Total pressure at HPC outlet): 141.86 psia | Trend: Declining ↓ ALERT (-27.8%)
+  Sensor  8 (Nf         — Physical fan speed): 2212.46 rpm | Trend: Stable (-0.5%)
+  Sensor  9 (Nc         — Physical core speed): 8376.64 rpm | Trend: Stable (-0.0%)
+  Sensor 11 (Ps30       — Static pressure at HPC outlet): 42.53 psia | Trend: Rising ↑ (+1.3%)
+  Sensor 12 (phi        — Ratio of fuel flow to Ps30): 133.10 pps/psi | Trend: Declining ↓ ALERT (-27.9%)
+  Sensor 13 (NRf        — Corrected fan speed): 2388.63 rpm | Trend: Stable (+0.0%)
+  Sensor 14 (NRc        — Corrected core speed): 8137.35 rpm | Trend: Rising ↑ (+0.6%)
+  Sensor 15 (BPR        — Bypass Ratio): 9.13 — | Trend: Declining ↓ (-0.9%)
+  Sensor 17 (htBleed    — Bleed Enthalpy): 333.00 — | Trend: Stable (+0.0%)
+  Sensor 20 (W31        — HPT coolant bleed): 10.67 lbm/s | Trend: Declining ↓ ALERT (-28.6%)
+  Sensor 21 (W32        — LPT coolant bleed): 6.41 lbm/s | Trend: Declining ↓ ALERT (-28.4%)
+
+⚠️  MAINTENANCE: IMMEDIATE inspection required!
+   Engine 12 will fail within 7 cycles.
+   Ground the engine and schedule full teardown.
+
+OPERATING CONDITIONS (Latest Cycle)
+--------------------------------------------------
+  Setting 1 (Altitude)               : 42.0023
+  Setting 2 (Mach Number)             : 0.8400
+  Setting 3 (Throttle Resolver Angle) : 100.0000

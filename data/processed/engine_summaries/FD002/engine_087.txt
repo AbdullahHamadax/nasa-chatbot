@@ -1,0 +1,35 @@
+ENGINE HEALTH REPORT — FD002 Dataset
+==================================================
+Engine ID      : 87
+Dataset        : FD002 (HPC Degradation)
+Op. Conditions : 6
+Cycles Recorded: 131
+RUL (Remaining): 21 cycles
+Health Status  : DEGRADED
+Risk Level     : HIGH
+
+SENSOR READINGS & TRENDS (Last 30 Cycles)
+--------------------------------------------------
+  Sensor  2 (T24        — Total temperature at LPC outlet): 605.67 °R | Trend: Rising ↑ ALERT (+12.8%)
+  Sensor  3 (T30        — Total temperature at HPC outlet): 1510.72 °R | Trend: Rising ↑ ALERT (+19.1%)
+  Sensor  4 (T50        — Total temperature at LPT outlet): 1322.62 °R | Trend: Rising ↑ ALERT (+26.0%)
+  Sensor  7 (P30        — Total pressure at HPC outlet): 393.88 psia | Trend: Rising ↑ ALERT (+123.8%)
+  Sensor  8 (Nf         — Physical fan speed): 2319.07 rpm | Trend: Rising ↑ ALERT (+21.1%)
+  Sensor  9 (Nc         — Physical core speed): 8769.40 rpm | Trend: Rising ↑ ALERT (+9.5%)
+  Sensor 11 (Ps30       — Static pressure at HPC outlet): 45.78 psia | Trend: Rising ↑ ALERT (+23.9%)
+  Sensor 12 (phi        — Ratio of fuel flow to Ps30): 371.42 pps/psi | Trend: Rising ↑ ALERT (+125.6%)
+  Sensor 13 (NRf        — Corrected fan speed): 2388.32 rpm | Trend: Rising ↑ ALERT (+17.8%)
+  Sensor 14 (NRc        — Corrected core speed): 8124.37 rpm | Trend: Rising ↑ ALERT (+3.2%)
+  Sensor 15 (BPR        — Bypass Ratio): 8.70 — | Trend: Declining ↓ ALERT (-20.4%)
+  Sensor 17 (htBleed    — Bleed Enthalpy): 371.00 — | Trend: Rising ↑ ALERT (+20.8%)
+  Sensor 20 (W31        — HPT coolant bleed): 28.38 lbm/s | Trend: Rising ↑ ALERT (+100.6%)
+  Sensor 21 (W32        — LPT coolant bleed): 17.03 lbm/s | Trend: Rising ↑ ALERT (+96.8%)
+
+⚠️  MAINTENANCE: Schedule inspection within 10 cycles.
+   Engine 87 shows advancing degradation.
+
+OPERATING CONDITIONS (Latest Cycle)
+--------------------------------------------------
+  Setting 1 (Altitude)               : 10.0009
+  Setting 2 (Mach Number)             : 0.2517
+  Setting 3 (Throttle Resolver Angle) : 100.0000

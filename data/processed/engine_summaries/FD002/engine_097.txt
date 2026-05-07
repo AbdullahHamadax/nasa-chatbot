@@ -1,0 +1,35 @@
+ENGINE HEALTH REPORT — FD002 Dataset
+==================================================
+Engine ID      : 97
+Dataset        : FD002 (HPC Degradation)
+Op. Conditions : 6
+Cycles Recorded: 213
+RUL (Remaining): 31 cycles
+Health Status  : DEGRADED
+Risk Level     : HIGH
+
+SENSOR READINGS & TRENDS (Last 30 Cycles)
+--------------------------------------------------
+  Sensor  2 (T24        — Total temperature at LPC outlet): 550.48 °R | Trend: Rising ↑ (+2.4%)
+  Sensor  3 (T30        — Total temperature at HPC outlet): 1360.47 °R | Trend: Rising ↑ ALERT (+7.6%)
+  Sensor  4 (T50        — Total temperature at LPT outlet): 1137.87 °R | Trend: Rising ↑ ALERT (+7.9%)
+  Sensor  7 (P30        — Total pressure at HPC outlet): 138.76 psia | Trend: Declining ↓ ALERT (-21.1%)
+  Sensor  8 (Nf         — Physical fan speed): 2211.84 rpm | Trend: Rising ↑ ALERT (+15.5%)
+  Sensor  9 (Nc         — Physical core speed): 8331.43 rpm | Trend: Rising ↑ ALERT (+3.9%)
+  Sensor 11 (Ps30       — Static pressure at HPC outlet): 42.46 psia | Trend: Rising ↑ ALERT (+14.7%)
+  Sensor 12 (phi        — Ratio of fuel flow to Ps30): 129.94 pps/psi | Trend: Declining ↓ ALERT (-20.9%)
+  Sensor 13 (NRf        — Corrected fan speed): 2387.91 rpm | Trend: Rising ↑ ALERT (+17.7%)
+  Sensor 14 (NRc        — Corrected core speed): 8087.82 rpm | Trend: Rising ↑ (+2.7%)
+  Sensor 15 (BPR        — Bypass Ratio): 9.43 — | Trend: Declining ↓ ALERT (-14.0%)
+  Sensor 17 (htBleed    — Bleed Enthalpy): 333.00 — | Trend: Rising ↑ ALERT (+7.8%)
+  Sensor 20 (W31        — HPT coolant bleed): 10.60 lbm/s | Trend: Declining ↓ ALERT (-25.2%)
+  Sensor 21 (W32        — LPT coolant bleed): 6.32 lbm/s | Trend: Declining ↓ ALERT (-26.8%)
+
+⚠️  MAINTENANCE: Schedule inspection within 10 cycles.
+   Engine 97 shows advancing degradation.
+
+OPERATING CONDITIONS (Latest Cycle)
+--------------------------------------------------
+  Setting 1 (Altitude)               : 41.9993
+  Setting 2 (Mach Number)             : 0.8400
+  Setting 3 (Throttle Resolver Angle) : 100.0000

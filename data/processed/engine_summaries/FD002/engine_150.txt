@@ -1,0 +1,35 @@
+ENGINE HEALTH REPORT — FD002 Dataset
+==================================================
+Engine ID      : 150
+Dataset        : FD002 (HPC Degradation)
+Op. Conditions : 6
+Cycles Recorded: 196
+RUL (Remaining): 34 cycles
+Health Status  : DEGRADED
+Risk Level     : HIGH
+
+SENSOR READINGS & TRENDS (Last 30 Cycles)
+--------------------------------------------------
+  Sensor  2 (T24        — Total temperature at LPC outlet): 536.84 °R | Trend: Declining ↓ (-2.4%)
+  Sensor  3 (T30        — Total temperature at HPC outlet): 1265.76 °R | Trend: Declining ↓ ALERT (-6.0%)
+  Sensor  4 (T50        — Total temperature at LPT outlet): 1048.24 °R | Trend: Declining ↓ ALERT (-6.8%)
+  Sensor  7 (P30        — Total pressure at HPC outlet): 174.85 psia | Trend: Rising ↑ ALERT (+26.2%)
+  Sensor  8 (Nf         — Physical fan speed): 1915.48 rpm | Trend: Declining ↓ ALERT (-13.4%)
+  Sensor  9 (Nc         — Physical core speed): 8020.79 rpm | Trend: Declining ↓ ALERT (-3.8%)
+  Sensor 11 (Ps30       — Static pressure at HPC outlet): 36.95 psia | Trend: Declining ↓ ALERT (-12.2%)
+  Sensor 12 (phi        — Ratio of fuel flow to Ps30): 164.37 pps/psi | Trend: Rising ↑ ALERT (+25.7%)
+  Sensor 13 (NRf        — Corrected fan speed): 2028.40 rpm | Trend: Declining ↓ ALERT (-15.1%)
+  Sensor 14 (NRc        — Corrected core speed): 7887.40 rpm | Trend: Declining ↓ (-2.5%)
+  Sensor 15 (BPR        — Bypass Ratio): 10.97 — | Trend: Rising ↑ ALERT (+16.6%)
+  Sensor 17 (htBleed    — Bleed Enthalpy): 310.00 — | Trend: Declining ↓ ALERT (-6.3%)
+  Sensor 20 (W31        — HPT coolant bleed): 14.04 lbm/s | Trend: Rising ↑ ALERT (+33.0%)
+  Sensor 21 (W32        — LPT coolant bleed): 8.56 lbm/s | Trend: Rising ↑ ALERT (+36.8%)
+
+⚠️  MAINTENANCE: Schedule inspection within 10 cycles.
+   Engine 150 shows advancing degradation.
+
+OPERATING CONDITIONS (Latest Cycle)
+--------------------------------------------------
+  Setting 1 (Altitude)               : 25.0064
+  Setting 2 (Mach Number)             : 0.6208
+  Setting 3 (Throttle Resolver Angle) : 60.0000

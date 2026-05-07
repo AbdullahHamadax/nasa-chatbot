@@ -1,0 +1,35 @@
+ENGINE HEALTH REPORT — FD002 Dataset
+==================================================
+Engine ID      : 15
+Dataset        : FD002 (HPC Degradation)
+Op. Conditions : 6
+Cycles Recorded: 165
+RUL (Remaining): 37 cycles
+Health Status  : DEGRADED
+Risk Level     : HIGH
+
+SENSOR READINGS & TRENDS (Last 30 Cycles)
+--------------------------------------------------
+  Sensor  2 (T24        — Total temperature at LPC outlet): 604.91 °R | Trend: Rising ↑ ALERT (+10.1%)
+  Sensor  3 (T30        — Total temperature at HPC outlet): 1504.80 °R | Trend: Rising ↑ ALERT (+11.0%)
+  Sensor  4 (T50        — Total temperature at LPT outlet): 1314.61 °R | Trend: Rising ↑ ALERT (+16.7%)
+  Sensor  7 (P30        — Total pressure at HPC outlet): 393.24 psia | Trend: Rising ↑ ALERT (+183.3%)
+  Sensor  8 (Nf         — Physical fan speed): 2319.06 rpm | Trend: Rising ↑ ALERT (+4.9%)
+  Sensor  9 (Nc         — Physical core speed): 8773.50 rpm | Trend: Rising ↑ ALERT (+5.5%)
+  Sensor 11 (Ps30       — Static pressure at HPC outlet): 45.67 psia | Trend: Rising ↑ ALERT (+8.6%)
+  Sensor 12 (phi        — Ratio of fuel flow to Ps30): 370.77 pps/psi | Trend: Rising ↑ ALERT (+184.2%)
+  Sensor 13 (NRf        — Corrected fan speed): 2388.28 rpm | Trend: Stable (+0.0%)
+  Sensor 14 (NRc        — Corrected core speed): 8127.24 rpm | Trend: Rising ↑ (+0.6%)
+  Sensor 15 (BPR        — Bypass Ratio): 8.70 — | Trend: Declining ↓ ALERT (-7.5%)
+  Sensor 17 (htBleed    — Bleed Enthalpy): 372.00 — | Trend: Rising ↑ ALERT (+12.0%)
+  Sensor 20 (W31        — HPT coolant bleed): 28.48 lbm/s | Trend: Rising ↑ ALERT (+170.7%)
+  Sensor 21 (W32        — LPT coolant bleed): 17.15 lbm/s | Trend: Rising ↑ ALERT (+171.6%)
+
+⚠️  MAINTENANCE: Schedule inspection within 10 cycles.
+   Engine 15 shows advancing degradation.
+
+OPERATING CONDITIONS (Latest Cycle)
+--------------------------------------------------
+  Setting 1 (Altitude)               : 10.0017
+  Setting 2 (Mach Number)             : 0.2500
+  Setting 3 (Throttle Resolver Angle) : 100.0000

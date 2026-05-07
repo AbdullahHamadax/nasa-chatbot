@@ -1,0 +1,34 @@
+ENGINE HEALTH REPORT — FD002 Dataset
+==================================================
+Engine ID      : 166
+Dataset        : FD002 (HPC Degradation)
+Op. Conditions : 6
+Cycles Recorded: 97
+RUL (Remaining): 188 cycles
+Health Status  : HEALTHY
+Risk Level     : LOW
+
+SENSOR READINGS & TRENDS (Last 30 Cycles)
+--------------------------------------------------
+  Sensor  2 (T24        — Total temperature at LPC outlet): 549.15 °R | Trend: Rising ↑ (+2.4%)
+  Sensor  3 (T30        — Total temperature at HPC outlet): 1353.28 °R | Trend: Rising ↑ ALERT (+6.9%)
+  Sensor  4 (T50        — Total temperature at LPT outlet): 1131.61 °R | Trend: Rising ↑ ALERT (+7.8%)
+  Sensor  7 (P30        — Total pressure at HPC outlet): 138.83 psia | Trend: Declining ↓ ALERT (-20.9%)
+  Sensor  8 (Nf         — Physical fan speed): 2211.97 rpm | Trend: Rising ↑ ALERT (+15.5%)
+  Sensor  9 (Nc         — Physical core speed): 8327.92 rpm | Trend: Rising ↑ ALERT (+4.0%)
+  Sensor 11 (Ps30       — Static pressure at HPC outlet): 42.17 psia | Trend: Rising ↑ ALERT (+15.1%)
+  Sensor 12 (phi        — Ratio of fuel flow to Ps30): 130.60 pps/psi | Trend: Declining ↓ ALERT (-20.9%)
+  Sensor 13 (NRf        — Corrected fan speed): 2388.06 rpm | Trend: Rising ↑ ALERT (+17.7%)
+  Sensor 14 (NRc        — Corrected core speed): 8090.73 rpm | Trend: Rising ↑ (+2.8%)
+  Sensor 15 (BPR        — Bypass Ratio): 9.37 — | Trend: Declining ↓ ALERT (-13.8%)
+  Sensor 17 (htBleed    — Bleed Enthalpy): 332.00 — | Trend: Rising ↑ ALERT (+8.1%)
+  Sensor 20 (W31        — HPT coolant bleed): 10.55 lbm/s | Trend: Declining ↓ ALERT (-25.6%)
+  Sensor 21 (W32        — LPT coolant bleed): 6.45 lbm/s | Trend: Declining ↓ ALERT (-24.0%)
+
+✅ MAINTENANCE: No immediate action. Engine operating normally.
+
+OPERATING CONDITIONS (Latest Cycle)
+--------------------------------------------------
+  Setting 1 (Altitude)               : 42.0018
+  Setting 2 (Mach Number)             : 0.8411
+  Setting 3 (Throttle Resolver Angle) : 100.0000

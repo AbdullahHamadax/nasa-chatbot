@@ -1,0 +1,34 @@
+ENGINE HEALTH REPORT — FD004 Dataset
+==================================================
+Engine ID      : 60
+Dataset        : FD004 (HPC Degradation + Fan Degradation)
+Op. Conditions : 6
+Cycles Recorded: 135
+RUL (Remaining): 139 cycles
+Health Status  : HEALTHY
+Risk Level     : LOW
+
+SENSOR READINGS & TRENDS (Last 30 Cycles)
+--------------------------------------------------
+  Sensor  2 (T24        — Total temperature at LPC outlet): 607.06 °R | Trend: Declining ↓ ALERT (-5.5%)
+  Sensor  3 (T30        — Total temperature at HPC outlet): 1484.07 °R | Trend: Declining ↓ ALERT (-6.6%)
+  Sensor  4 (T50        — Total temperature at LPT outlet): 1247.54 °R | Trend: Declining ↓ ALERT (-10.8%)
+  Sensor  7 (P30        — Total pressure at HPC outlet): 336.82 psia | Trend: Declining ↓ ALERT (-39.6%)
+  Sensor  8 (Nf         — Physical fan speed): 2324.04 rpm | Trend: Declining ↓ (-2.7%)
+  Sensor  9 (Nc         — Physical core speed): 8733.81 rpm | Trend: Declining ↓ ALERT (-3.7%)
+  Sensor 11 (Ps30       — Static pressure at HPC outlet): 44.19 psia | Trend: Declining ↓ ALERT (-6.7%)
+  Sensor 12 (phi        — Ratio of fuel flow to Ps30): 317.14 pps/psi | Trend: Declining ↓ ALERT (-39.7%)
+  Sensor 13 (NRf        — Corrected fan speed): 2388.16 rpm | Trend: Stable (+0.0%)
+  Sensor 14 (NRc        — Corrected core speed): 8070.02 rpm | Trend: Declining ↓ (-1.0%)
+  Sensor 15 (BPR        — Bypass Ratio): 9.17 — | Trend: Rising ↑ ALERT (+9.6%)
+  Sensor 17 (htBleed    — Bleed Enthalpy): 366.00 — | Trend: Declining ↓ ALERT (-6.9%)
+  Sensor 20 (W31        — HPT coolant bleed): 24.64 lbm/s | Trend: Declining ↓ ALERT (-37.2%)
+  Sensor 21 (W32        — LPT coolant bleed): 14.80 lbm/s | Trend: Declining ↓ ALERT (-37.2%)
+
+✅ MAINTENANCE: No immediate action. Engine operating normally.
+
+OPERATING CONDITIONS (Latest Cycle)
+--------------------------------------------------
+  Setting 1 (Altitude)               : 20.0017
+  Setting 2 (Mach Number)             : 0.7006
+  Setting 3 (Throttle Resolver Angle) : 100.0000

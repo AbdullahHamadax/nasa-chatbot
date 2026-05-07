@@ -1,0 +1,34 @@
+ENGINE HEALTH REPORT — FD002 Dataset
+==================================================
+Engine ID      : 125
+Dataset        : FD002 (HPC Degradation)
+Op. Conditions : 6
+Cycles Recorded: 79
+RUL (Remaining): 179 cycles
+Health Status  : HEALTHY
+Risk Level     : LOW
+
+SENSOR READINGS & TRENDS (Last 30 Cycles)
+--------------------------------------------------
+  Sensor  2 (T24        — Total temperature at LPC outlet): 536.82 °R | Trend: Declining ↓ (-2.3%)
+  Sensor  3 (T30        — Total temperature at HPC outlet): 1257.37 °R | Trend: Declining ↓ ALERT (-7.3%)
+  Sensor  4 (T50        — Total temperature at LPT outlet): 1052.12 °R | Trend: Declining ↓ ALERT (-6.8%)
+  Sensor  7 (P30        — Total pressure at HPC outlet): 174.75 psia | Trend: Rising ↑ ALERT (+26.0%)
+  Sensor  8 (Nf         — Physical fan speed): 1915.34 rpm | Trend: Declining ↓ ALERT (-13.4%)
+  Sensor  9 (Nc         — Physical core speed): 8015.91 rpm | Trend: Declining ↓ ALERT (-3.7%)
+  Sensor 11 (Ps30       — Static pressure at HPC outlet): 36.70 psia | Trend: Declining ↓ ALERT (-12.7%)
+  Sensor 12 (phi        — Ratio of fuel flow to Ps30): 164.35 pps/psi | Trend: Rising ↑ ALERT (+25.8%)
+  Sensor 13 (NRf        — Corrected fan speed): 2028.19 rpm | Trend: Declining ↓ ALERT (-15.1%)
+  Sensor 14 (NRc        — Corrected core speed): 7872.86 rpm | Trend: Declining ↓ (-2.6%)
+  Sensor 15 (BPR        — Bypass Ratio): 10.89 — | Trend: Rising ↑ ALERT (+16.2%)
+  Sensor 17 (htBleed    — Bleed Enthalpy): 307.00 — | Trend: Declining ↓ ALERT (-7.0%)
+  Sensor 20 (W31        — HPT coolant bleed): 14.24 lbm/s | Trend: Rising ↑ ALERT (+35.5%)
+  Sensor 21 (W32        — LPT coolant bleed): 8.60 lbm/s | Trend: Rising ↑ ALERT (+33.5%)
+
+✅ MAINTENANCE: No immediate action. Engine operating normally.
+
+OPERATING CONDITIONS (Latest Cycle)
+--------------------------------------------------
+  Setting 1 (Altitude)               : 25.0058
+  Setting 2 (Mach Number)             : 0.6218
+  Setting 3 (Throttle Resolver Angle) : 60.0000

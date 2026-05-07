@@ -1,0 +1,36 @@
+ENGINE HEALTH REPORT — FD004 Dataset
+==================================================
+Engine ID      : 155
+Dataset        : FD004 (HPC Degradation + Fan Degradation)
+Op. Conditions : 6
+Cycles Recorded: 161
+RUL (Remaining): 7 cycles
+Health Status  : CRITICAL
+Risk Level     : CRITICAL
+
+SENSOR READINGS & TRENDS (Last 30 Cycles)
+--------------------------------------------------
+  Sensor  2 (T24        — Total temperature at LPC outlet): 605.67 °R | Trend: Stable (+0.0%)
+  Sensor  3 (T30        — Total temperature at HPC outlet): 1509.04 °R | Trend: Stable (+0.4%)
+  Sensor  4 (T50        — Total temperature at LPT outlet): 1322.49 °R | Trend: Rising ↑ (+0.6%)
+  Sensor  7 (P30        — Total pressure at HPC outlet): 393.60 psia | Trend: Stable (-0.2%)
+  Sensor  8 (Nf         — Physical fan speed): 2319.10 rpm | Trend: Stable (+0.0%)
+  Sensor  9 (Nc         — Physical core speed): 8806.82 rpm | Trend: Stable (+0.2%)
+  Sensor 11 (Ps30       — Static pressure at HPC outlet): 45.93 psia | Trend: Rising ↑ (+0.7%)
+  Sensor 12 (phi        — Ratio of fuel flow to Ps30): 370.77 pps/psi | Trend: Stable (-0.1%)
+  Sensor 13 (NRf        — Corrected fan speed): 2388.38 rpm | Trend: Stable (+0.0%)
+  Sensor 14 (NRc        — Corrected core speed): 8151.81 rpm | Trend: Stable (+0.2%)
+  Sensor 15 (BPR        — Bypass Ratio): 8.76 — | Trend: Rising ↑ (+0.8%)
+  Sensor 17 (htBleed    — Bleed Enthalpy): 370.00 — | Trend: Stable (+0.0%)
+  Sensor 20 (W31        — HPT coolant bleed): 28.43 lbm/s | Trend: Stable (-0.1%)
+  Sensor 21 (W32        — LPT coolant bleed): 17.00 lbm/s | Trend: Stable (-0.3%)
+
+⚠️  MAINTENANCE: IMMEDIATE inspection required!
+   Engine 155 will fail within 7 cycles.
+   Ground the engine and schedule full teardown.
+
+OPERATING CONDITIONS (Latest Cycle)
+--------------------------------------------------
+  Setting 1 (Altitude)               : 10.0020
+  Setting 2 (Mach Number)             : 0.2516
+  Setting 3 (Throttle Resolver Angle) : 100.0000

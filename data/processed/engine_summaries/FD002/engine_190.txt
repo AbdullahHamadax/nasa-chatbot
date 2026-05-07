@@ -1,0 +1,36 @@
+ENGINE HEALTH REPORT — FD002 Dataset
+==================================================
+Engine ID      : 190
+Dataset        : FD002 (HPC Degradation)
+Op. Conditions : 6
+Cycles Recorded: 158
+RUL (Remaining): 12 cycles
+Health Status  : CRITICAL
+Risk Level     : CRITICAL
+
+SENSOR READINGS & TRENDS (Last 30 Cycles)
+--------------------------------------------------
+  Sensor  2 (T24        — Total temperature at LPC outlet): 550.12 °R | Trend: Stable (+0.0%)
+  Sensor  3 (T30        — Total temperature at HPC outlet): 1357.43 °R | Trend: Stable (-0.0%)
+  Sensor  4 (T50        — Total temperature at LPT outlet): 1138.37 °R | Trend: Rising ↑ (+0.7%)
+  Sensor  7 (P30        — Total pressure at HPC outlet): 138.34 psia | Trend: Stable (+0.0%)
+  Sensor  8 (Nf         — Physical fan speed): 2211.49 rpm | Trend: Stable (-0.0%)
+  Sensor  9 (Nc         — Physical core speed): 8310.44 rpm | Trend: Stable (-0.1%)
+  Sensor 11 (Ps30       — Static pressure at HPC outlet): 42.46 psia | Trend: Stable (+0.2%)
+  Sensor 12 (phi        — Ratio of fuel flow to Ps30): 130.62 pps/psi | Trend: Stable (+0.4%)
+  Sensor 13 (NRf        — Corrected fan speed): 2387.52 rpm | Trend: Stable (-0.0%)
+  Sensor 14 (NRc        — Corrected core speed): 8067.34 rpm | Trend: Stable (-0.1%)
+  Sensor 15 (BPR        — Bypass Ratio): 9.45 — | Trend: Stable (+0.3%)
+  Sensor 17 (htBleed    — Bleed Enthalpy): 333.00 — | Trend: Stable (+0.3%)
+  Sensor 20 (W31        — HPT coolant bleed): 10.52 lbm/s | Trend: Declining ↓ (-1.7%)
+  Sensor 21 (W32        — LPT coolant bleed): 6.22 lbm/s | Trend: Declining ↓ (-0.6%)
+
+⚠️  MAINTENANCE: IMMEDIATE inspection required!
+   Engine 190 will fail within 12 cycles.
+   Ground the engine and schedule full teardown.
+
+OPERATING CONDITIONS (Latest Cycle)
+--------------------------------------------------
+  Setting 1 (Altitude)               : 42.0025
+  Setting 2 (Mach Number)             : 0.8401
+  Setting 3 (Throttle Resolver Angle) : 100.0000

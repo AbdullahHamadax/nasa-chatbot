@@ -1,0 +1,23 @@
+TURBOFAN ENGINE FUNDAMENTALS
+==================================================
+A turbofan engine is a type of air-breathing jet engine widely used in commercial and military aviation.
+
+MAIN COMPONENTS:
+- Fan: Large front fan that draws in air. Most air bypasses the core (bypass air).
+- Low Pressure Compressor (LPC): Compresses air before it enters the high pressure section.
+- High Pressure Compressor (HPC): Further compresses air to very high pressures before combustion.
+- Combustion Chamber: Fuel is mixed with compressed air and ignited.
+- High Pressure Turbine (HPT): Extracts energy from hot gases to drive the HPC.
+- Low Pressure Turbine (LPT): Extracts energy to drive the fan and LPC.
+- Nozzle: Accelerates exhaust gases to produce thrust.
+
+KEY PERFORMANCE METRICS:
+- Bypass Ratio (BPR): Ratio of bypass air to core air. Higher BPR = more fuel efficient.
+- Engine Pressure Ratio (EPR): Ratio of exhaust pressure to inlet pressure. Indicates thrust.
+- Exhaust Gas Temperature (EGT): Monitored for engine health. Rising EGT = degradation.
+
+COMMON FAILURE MODES IN C-MAPSS:
+1. HPC Degradation: Efficiency and flow capacity of the HPC decrease over time.
+   Symptoms: Rising temperatures (T30), declining pressures (P30, Ps30), BPR changes.
+2. Fan Degradation: Fan blade erosion or damage reduces efficiency.
+   Symptoms: Changes in fan speed (Nf), bypass ratio, and inlet temperatures.

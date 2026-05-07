@@ -1,0 +1,23 @@
+REMAINING USEFUL LIFE (RUL) EXPLAINED
+==================================================
+
+WHAT IS RUL?
+Remaining Useful Life (RUL) is the number of flight cycles an engine
+can complete before it requires maintenance or fails.
+
+In the C-MAPSS dataset:
+- Each cycle = one complete flight (takeoff → cruise → landing)
+- RUL = 0 means the engine has reached end of life
+- The RUL values in this system come from the NASA RUL test files,
+  representing engines that are CURRENTLY in service (not yet failed)
+
+HOW RUL IS CALCULATED (test data):
+  RUL at any cycle = RUL_from_file + (last_recorded_cycle - current_cycle)
+  Example: Engine last recorded at cycle 150, RUL file says 50.
+           At cycle 130: RUL = 50 + (150 - 130) = 70 cycles remaining.
+
+DATASET SUBSETS:
+- FD001: 100 test engines, 1 operating condition, HPC Degradation only
+- FD002: 259 test engines, 6 operating conditions, HPC Degradation only
+- FD003: 100 test engines, 1 operating condition, HPC + Fan Degradation
+- FD004: 248 test engines, 6 operating conditions, HPC + Fan Degradation (hardest)

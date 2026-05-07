@@ -1,0 +1,34 @@
+ENGINE HEALTH REPORT — FD004 Dataset
+==================================================
+Engine ID      : 74
+Dataset        : FD004 (HPC Degradation + Fan Degradation)
+Op. Conditions : 6
+Cycles Recorded: 223
+RUL (Remaining): 89 cycles
+Health Status  : HEALTHY
+Risk Level     : LOW
+
+SENSOR READINGS & TRENDS (Last 30 Cycles)
+--------------------------------------------------
+  Sensor  2 (T24        — Total temperature at LPC outlet): 606.51 °R | Trend: Rising ↑ ALERT (+13.1%)
+  Sensor  3 (T30        — Total temperature at HPC outlet): 1480.72 °R | Trend: Rising ↑ ALERT (+18.3%)
+  Sensor  4 (T50        — Total temperature at LPT outlet): 1238.77 °R | Trend: Rising ↑ ALERT (+19.0%)
+  Sensor  7 (P30        — Total pressure at HPC outlet): 333.76 psia | Trend: Rising ↑ ALERT (+90.9%)
+  Sensor  8 (Nf         — Physical fan speed): 2323.85 rpm | Trend: Rising ↑ ALERT (+21.3%)
+  Sensor  9 (Nc         — Physical core speed): 8724.22 rpm | Trend: Rising ↑ ALERT (+9.0%)
+  Sensor 11 (Ps30       — Static pressure at HPC outlet): 44.19 psia | Trend: Rising ↑ ALERT (+21.1%)
+  Sensor 12 (phi        — Ratio of fuel flow to Ps30): 314.32 pps/psi | Trend: Rising ↑ ALERT (+92.0%)
+  Sensor 13 (NRf        — Corrected fan speed): 2388.01 rpm | Trend: Rising ↑ ALERT (+17.7%)
+  Sensor 14 (NRc        — Corrected core speed): 8062.85 rpm | Trend: Rising ↑ (+2.4%)
+  Sensor 15 (BPR        — Bypass Ratio): 9.14 — | Trend: Declining ↓ ALERT (-15.8%)
+  Sensor 17 (htBleed    — Bleed Enthalpy): 363.00 — | Trend: Rising ↑ ALERT (+19.0%)
+  Sensor 20 (W31        — HPT coolant bleed): 24.50 lbm/s | Trend: Rising ↑ ALERT (+70.3%)
+  Sensor 21 (W32        — LPT coolant bleed): 14.68 lbm/s | Trend: Rising ↑ ALERT (+70.6%)
+
+✅ MAINTENANCE: No immediate action. Engine operating normally.
+
+OPERATING CONDITIONS (Latest Cycle)
+--------------------------------------------------
+  Setting 1 (Altitude)               : 20.0032
+  Setting 2 (Mach Number)             : 0.7001
+  Setting 3 (Throttle Resolver Angle) : 100.0000

@@ -1,0 +1,34 @@
+ENGINE HEALTH REPORT — FD004 Dataset
+==================================================
+Engine ID      : 189
+Dataset        : FD004 (HPC Degradation + Fan Degradation)
+Op. Conditions : 6
+Cycles Recorded: 107
+RUL (Remaining): 56 cycles
+Health Status  : WATCH
+Risk Level     : MEDIUM
+
+SENSOR READINGS & TRENDS (Last 30 Cycles)
+--------------------------------------------------
+  Sensor  2 (T24        — Total temperature at LPC outlet): 548.89 °R | Trend: Rising ↑ (+2.4%)
+  Sensor  3 (T30        — Total temperature at HPC outlet): 1353.54 °R | Trend: Rising ↑ ALERT (+7.7%)
+  Sensor  4 (T50        — Total temperature at LPT outlet): 1121.79 °R | Trend: Rising ↑ ALERT (+6.2%)
+  Sensor  7 (P30        — Total pressure at HPC outlet): 140.55 psia | Trend: Declining ↓ ALERT (-20.3%)
+  Sensor  8 (Nf         — Physical fan speed): 2212.07 rpm | Trend: Rising ↑ ALERT (+15.5%)
+  Sensor  9 (Nc         — Physical core speed): 8333.16 rpm | Trend: Rising ↑ ALERT (+4.1%)
+  Sensor 11 (Ps30       — Static pressure at HPC outlet): 41.98 psia | Trend: Rising ↑ ALERT (+14.9%)
+  Sensor 12 (phi        — Ratio of fuel flow to Ps30): 131.35 pps/psi | Trend: Declining ↓ ALERT (-20.5%)
+  Sensor 13 (NRf        — Corrected fan speed): 2388.18 rpm | Trend: Rising ↑ ALERT (+17.7%)
+  Sensor 14 (NRc        — Corrected core speed): 8095.55 rpm | Trend: Rising ↑ (+2.8%)
+  Sensor 15 (BPR        — Bypass Ratio): 9.27 — | Trend: Declining ↓ ALERT (-14.1%)
+  Sensor 17 (htBleed    — Bleed Enthalpy): 331.00 — | Trend: Rising ↑ ALERT (+7.8%)
+  Sensor 20 (W31        — HPT coolant bleed): 10.70 lbm/s | Trend: Declining ↓ ALERT (-26.0%)
+  Sensor 21 (W32        — LPT coolant bleed): 6.42 lbm/s | Trend: Declining ↓ ALERT (-25.6%)
+
+📋 MAINTENANCE: Monitor closely. Schedule next routine check.
+
+OPERATING CONDITIONS (Latest Cycle)
+--------------------------------------------------
+  Setting 1 (Altitude)               : 41.9981
+  Setting 2 (Mach Number)             : 0.8400
+  Setting 3 (Throttle Resolver Angle) : 100.0000

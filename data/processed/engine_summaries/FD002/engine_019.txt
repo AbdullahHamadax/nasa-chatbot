@@ -1,0 +1,35 @@
+ENGINE HEALTH REPORT — FD002 Dataset
+==================================================
+Engine ID      : 19
+Dataset        : FD002 (HPC Degradation)
+Op. Conditions : 6
+Cycles Recorded: 172
+RUL (Remaining): 22 cycles
+Health Status  : DEGRADED
+Risk Level     : HIGH
+
+SENSOR READINGS & TRENDS (Last 30 Cycles)
+--------------------------------------------------
+  Sensor  2 (T24        — Total temperature at LPC outlet): 643.19 °R | Trend: Rising ↑ ALERT (+19.8%)
+  Sensor  3 (T30        — Total temperature at HPC outlet): 1597.90 °R | Trend: Rising ↑ ALERT (+25.6%)
+  Sensor  4 (T50        — Total temperature at LPT outlet): 1416.75 °R | Trend: Rising ↑ ALERT (+34.7%)
+  Sensor  7 (P30        — Total pressure at HPC outlet): 553.50 psia | Trend: Rising ↑ ALERT (+217.0%)
+  Sensor  8 (Nf         — Physical fan speed): 2388.08 rpm | Trend: Rising ↑ ALERT (+24.6%)
+  Sensor  9 (Nc         — Physical core speed): 9139.14 rpm | Trend: Rising ↑ ALERT (+13.7%)
+  Sensor 11 (Ps30       — Static pressure at HPC outlet): 47.66 psia | Trend: Rising ↑ ALERT (+29.7%)
+  Sensor 12 (phi        — Ratio of fuel flow to Ps30): 521.42 pps/psi | Trend: Rising ↑ ALERT (+216.5%)
+  Sensor 13 (NRf        — Corrected fan speed): 2388.10 rpm | Trend: Rising ↑ ALERT (+17.7%)
+  Sensor 14 (NRc        — Corrected core speed): 8202.93 rpm | Trend: Rising ↑ ALERT (+3.8%)
+  Sensor 15 (BPR        — Bypass Ratio): 8.47 — | Trend: Declining ↓ ALERT (-22.5%)
+  Sensor 17 (htBleed    — Bleed Enthalpy): 395.00 — | Trend: Rising ↑ ALERT (+28.2%)
+  Sensor 20 (W31        — HPT coolant bleed): 38.63 lbm/s | Trend: Rising ↑ ALERT (+172.0%)
+  Sensor 21 (W32        — LPT coolant bleed): 23.17 lbm/s | Trend: Rising ↑ ALERT (+172.2%)
+
+⚠️  MAINTENANCE: Schedule inspection within 10 cycles.
+   Engine 19 shows advancing degradation.
+
+OPERATING CONDITIONS (Latest Cycle)
+--------------------------------------------------
+  Setting 1 (Altitude)               : 0.0025
+  Setting 2 (Mach Number)             : 0.0017
+  Setting 3 (Throttle Resolver Angle) : 100.0000

@@ -1,0 +1,42 @@
+C-MAPSS SENSOR DICTIONARY
+==================================================
+The C-MAPSS dataset monitors 21 sensors on each turbofan engine.
+
+OPERATIONAL SETTINGS:
+- Setting 1: Altitude (affects air density and engine performance)
+- Setting 2: Mach Number (flight speed ratio to speed of sound)
+- Setting 3: Throttle Resolver Angle (TRA - power demand)
+
+TEMPERATURE SENSORS:
+- Sensor 1  (T2)   : Total temperature at fan inlet [°R] — Ambient conditions
+- Sensor 2  (T24)  : Total temperature at LPC outlet [°R] — LPC health indicator
+- Sensor 3  (T30)  : Total temperature at HPC outlet [°R] — KEY: HPC degradation marker
+- Sensor 4  (T50)  : Total temperature at LPT outlet [°R] — Turbine health
+
+PRESSURE SENSORS:
+- Sensor 5  (P2)   : Pressure at fan inlet [psia] — Nearly constant (ambient)
+- Sensor 6  (P15)  : Total pressure in bypass-duct [psia] — Fan performance
+- Sensor 7  (P30)  : Total pressure at HPC outlet [psia] — KEY: HPC health
+- Sensor 11 (Ps30) : Static pressure at HPC outlet [psia] — KEY: Degradation marker
+
+SPEED SENSORS:
+- Sensor 8  (Nf)   : Physical fan speed [rpm] — Fan mechanical health
+- Sensor 9  (Nc)   : Physical core speed [rpm] — Core mechanical health
+- Sensor 13 (NRf)  : Corrected fan speed [rpm] — Normalized fan performance
+- Sensor 14 (NRc)  : Corrected core speed [rpm] — Normalized core performance
+
+RATIO & FLOW SENSORS:
+- Sensor 10 (epr)  : Engine pressure ratio [—] — Overall thrust indicator
+- Sensor 12 (phi)  : Fuel flow to Ps30 ratio [pps/psi] — Fuel efficiency
+- Sensor 15 (BPR)  : Bypass Ratio [—] — KEY: Overall engine efficiency
+- Sensor 16 (farB) : Burner fuel-air ratio [—] — Combustion efficiency
+
+BLEED & DEMAND SENSORS:
+- Sensor 17 (htBleed)    : Bleed Enthalpy [—] — Cooling system demand
+- Sensor 18 (Nf_dmd)     : Demanded fan speed [rpm] — Control system output
+- Sensor 19 (PCNfR_dmd)  : Demanded corrected fan speed [rpm] — Control demand
+- Sensor 20 (W31)        : HPT coolant bleed [lbm/s] — Turbine cooling flow
+- Sensor 21 (W32)        : LPT coolant bleed [lbm/s] — Turbine cooling flow
+
+KEY sensors for degradation detection: 2, 3, 4, 7, 8, 9, 11, 12, 13, 14, 15, 17, 20, 21.
+Sensors 1, 5, 6, 10, 16, 18, 19 are nearly constant in FD001/FD003 (single operating condition).

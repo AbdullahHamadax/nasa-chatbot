@@ -1,0 +1,34 @@
+ENGINE HEALTH REPORT — FD002 Dataset
+==================================================
+Engine ID      : 72
+Dataset        : FD002 (HPC Degradation)
+Op. Conditions : 6
+Cycles Recorded: 143
+RUL (Remaining): 104 cycles
+Health Status  : HEALTHY
+Risk Level     : LOW
+
+SENSOR READINGS & TRENDS (Last 30 Cycles)
+--------------------------------------------------
+  Sensor  2 (T24        — Total temperature at LPC outlet): 536.96 °R | Trend: Declining ↓ ALERT (-11.6%)
+  Sensor  3 (T30        — Total temperature at HPC outlet): 1258.96 °R | Trend: Declining ↓ ALERT (-15.3%)
+  Sensor  4 (T50        — Total temperature at LPT outlet): 1050.51 °R | Trend: Declining ↓ ALERT (-16.3%)
+  Sensor  7 (P30        — Total pressure at HPC outlet): 174.84 psia | Trend: Declining ↓ ALERT (-47.7%)
+  Sensor  8 (Nf         — Physical fan speed): 1915.40 rpm | Trend: Declining ↓ ALERT (-17.6%)
+  Sensor  9 (Nc         — Physical core speed): 8013.31 rpm | Trend: Declining ↓ ALERT (-8.1%)
+  Sensor 11 (Ps30       — Static pressure at HPC outlet): 36.80 psia | Trend: Declining ↓ ALERT (-16.9%)
+  Sensor 12 (phi        — Ratio of fuel flow to Ps30): 164.75 pps/psi | Trend: Declining ↓ ALERT (-47.7%)
+  Sensor 13 (NRf        — Corrected fan speed): 2028.28 rpm | Trend: Declining ↓ ALERT (-15.1%)
+  Sensor 14 (NRc        — Corrected core speed): 7884.04 rpm | Trend: Declining ↓ (-2.2%)
+  Sensor 15 (BPR        — Bypass Ratio): 10.90 — | Trend: Rising ↑ ALERT (+18.5%)
+  Sensor 17 (htBleed    — Bleed Enthalpy): 308.00 — | Trend: Declining ↓ ALERT (-15.6%)
+  Sensor 20 (W31        — HPT coolant bleed): 14.35 lbm/s | Trend: Declining ↓ ALERT (-41.3%)
+  Sensor 21 (W32        — LPT coolant bleed): 8.56 lbm/s | Trend: Declining ↓ ALERT (-41.5%)
+
+✅ MAINTENANCE: No immediate action. Engine operating normally.
+
+OPERATING CONDITIONS (Latest Cycle)
+--------------------------------------------------
+  Setting 1 (Altitude)               : 25.0038
+  Setting 2 (Mach Number)             : 0.6200
+  Setting 3 (Throttle Resolver Angle) : 60.0000

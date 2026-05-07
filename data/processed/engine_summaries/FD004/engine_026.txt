@@ -1,0 +1,34 @@
+ENGINE HEALTH REPORT — FD004 Dataset
+==================================================
+Engine ID      : 26
+Dataset        : FD004 (HPC Degradation + Fan Degradation)
+Op. Conditions : 6
+Cycles Recorded: 90
+RUL (Remaining): 92 cycles
+Health Status  : HEALTHY
+Risk Level     : LOW
+
+SENSOR READINGS & TRENDS (Last 30 Cycles)
+--------------------------------------------------
+  Sensor  2 (T24        — Total temperature at LPC outlet): 605.30 °R | Trend: Rising ↑ ALERT (+12.7%)
+  Sensor  3 (T30        — Total temperature at HPC outlet): 1502.81 °R | Trend: Rising ↑ ALERT (+19.8%)
+  Sensor  4 (T50        — Total temperature at LPT outlet): 1303.38 °R | Trend: Rising ↑ ALERT (+24.8%)
+  Sensor  7 (P30        — Total pressure at HPC outlet): 393.30 psia | Trend: Rising ↑ ALERT (+123.9%)
+  Sensor  8 (Nf         — Physical fan speed): 2318.91 rpm | Trend: Rising ↑ ALERT (+21.1%)
+  Sensor  9 (Nc         — Physical core speed): 8775.96 rpm | Trend: Rising ↑ ALERT (+9.6%)
+  Sensor 11 (Ps30       — Static pressure at HPC outlet): 45.53 psia | Trend: Rising ↑ ALERT (+24.0%)
+  Sensor 12 (phi        — Ratio of fuel flow to Ps30): 371.23 pps/psi | Trend: Rising ↑ ALERT (+125.3%)
+  Sensor 13 (NRf        — Corrected fan speed): 2388.11 rpm | Trend: Rising ↑ ALERT (+17.8%)
+  Sensor 14 (NRc        — Corrected core speed): 8123.34 rpm | Trend: Rising ↑ ALERT (+3.3%)
+  Sensor 15 (BPR        — Bypass Ratio): 8.64 — | Trend: Declining ↓ ALERT (-20.8%)
+  Sensor 17 (htBleed    — Bleed Enthalpy): 369.00 — | Trend: Rising ↑ ALERT (+20.2%)
+  Sensor 20 (W31        — HPT coolant bleed): 28.42 lbm/s | Trend: Rising ↑ ALERT (+99.6%)
+  Sensor 21 (W32        — LPT coolant bleed): 17.16 lbm/s | Trend: Rising ↑ ALERT (+99.3%)
+
+✅ MAINTENANCE: No immediate action. Engine operating normally.
+
+OPERATING CONDITIONS (Latest Cycle)
+--------------------------------------------------
+  Setting 1 (Altitude)               : 9.9999
+  Setting 2 (Mach Number)             : 0.2514
+  Setting 3 (Throttle Resolver Angle) : 100.0000

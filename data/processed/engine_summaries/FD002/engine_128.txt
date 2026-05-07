@@ -1,0 +1,34 @@
+ENGINE HEALTH REPORT — FD002 Dataset
+==================================================
+Engine ID      : 128
+Dataset        : FD002 (HPC Degradation)
+Op. Conditions : 6
+Cycles Recorded: 110
+RUL (Remaining): 108 cycles
+Health Status  : HEALTHY
+Risk Level     : LOW
+
+SENSOR READINGS & TRENDS (Last 30 Cycles)
+--------------------------------------------------
+  Sensor  2 (T24        — Total temperature at LPC outlet): 536.96 °R | Trend: Declining ↓ ALERT (-16.4%)
+  Sensor  3 (T30        — Total temperature at HPC outlet): 1267.31 °R | Trend: Declining ↓ ALERT (-20.2%)
+  Sensor  4 (T50        — Total temperature at LPT outlet): 1042.46 °R | Trend: Declining ↓ ALERT (-25.7%)
+  Sensor  7 (P30        — Total pressure at HPC outlet): 175.56 psia | Trend: Declining ↓ ALERT (-68.3%)
+  Sensor  8 (Nf         — Physical fan speed): 1915.27 rpm | Trend: Declining ↓ ALERT (-19.8%)
+  Sensor  9 (Nc         — Physical core speed): 8010.74 rpm | Trend: Declining ↓ ALERT (-11.5%)
+  Sensor 11 (Ps30       — Static pressure at HPC outlet): 36.82 psia | Trend: Declining ↓ ALERT (-22.3%)
+  Sensor 12 (phi        — Ratio of fuel flow to Ps30): 165.04 pps/psi | Trend: Declining ↓ ALERT (-68.4%)
+  Sensor 13 (NRf        — Corrected fan speed): 2028.21 rpm | Trend: Declining ↓ ALERT (-15.1%)
+  Sensor 14 (NRc        — Corrected core speed): 7872.20 rpm | Trend: Declining ↓ ALERT (-3.2%)
+  Sensor 15 (BPR        — Bypass Ratio): 10.90 — | Trend: Rising ↑ ALERT (+29.4%)
+  Sensor 17 (htBleed    — Bleed Enthalpy): 307.00 — | Trend: Declining ↓ ALERT (-21.7%)
+  Sensor 20 (W31        — HPT coolant bleed): 14.20 lbm/s | Trend: Declining ↓ ALERT (-63.5%)
+  Sensor 21 (W32        — LPT coolant bleed): 8.56 lbm/s | Trend: Declining ↓ ALERT (-63.5%)
+
+✅ MAINTENANCE: No immediate action. Engine operating normally.
+
+OPERATING CONDITIONS (Latest Cycle)
+--------------------------------------------------
+  Setting 1 (Altitude)               : 25.0080
+  Setting 2 (Mach Number)             : 0.6200
+  Setting 3 (Throttle Resolver Angle) : 60.0000

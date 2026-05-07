@@ -1,0 +1,115 @@
+FLEET OVERVIEW — FD001 Dataset
+==================================================
+Dataset        : FD001 (HPC Degradation)
+Total Engines  : 100
+
+ENGINE STATUS SUMMARY
+--------------------------------------------------
+
+🔴 CRITICAL (10 engines) — Ground immediately:
+  Engine 31: RUL = 8 cycles
+  Engine 34: RUL = 7 cycles
+  Engine 35: RUL = 11 cycles
+  Engine 42: RUL = 10 cycles
+  Engine 56: RUL = 15 cycles
+  Engine 66: RUL = 14 cycles
+  Engine 68: RUL = 8 cycles
+  Engine 76: RUL = 10 cycles
+  Engine 81: RUL = 8 cycles
+  Engine 82: RUL = 9 cycles
+
+🟠 DEGRADED (18 engines) — Schedule inspection soon:
+  Engine 18: RUL = 28 cycles
+  Engine 20: RUL = 16 cycles
+  Engine 24: RUL = 20 cycles
+  Engine 36: RUL = 19 cycles
+  Engine 37: RUL = 21 cycles
+  Engine 40: RUL = 28 cycles
+  Engine 41: RUL = 18 cycles
+  Engine 49: RUL = 21 cycles
+  Engine 52: RUL = 29 cycles
+  Engine 53: RUL = 26 cycles
+  Engine 58: RUL = 37 cycles
+  Engine 61: RUL = 21 cycles
+  Engine 64: RUL = 28 cycles
+  Engine 77: RUL = 34 cycles
+  Engine 90: RUL = 28 cycles
+  Engine 91: RUL = 38 cycles
+  Engine 92: RUL = 20 cycles
+  Engine 100: RUL = 20 cycles
+
+🟡 WATCH (17 engines) — Monitor closely:
+  Engine 3: RUL = 69 cycles
+  Engine 17: RUL = 50 cycles
+  Engine 21: RUL = 57 cycles
+  Engine 27: RUL = 66 cycles
+  Engine 32: RUL = 48 cycles
+  Engine 38: RUL = 50 cycles
+  Engine 43: RUL = 59 cycles
+  Engine 46: RUL = 47 cycles
+  Engine 50: RUL = 79 cycles
+  Engine 62: RUL = 54 cycles
+  Engine 63: RUL = 72 cycles
+  Engine 67: RUL = 77 cycles
+  Engine 72: RUL = 50 cycles
+  Engine 79: RUL = 63 cycles
+  Engine 84: RUL = 58 cycles
+  Engine 94: RUL = 55 cycles
+  Engine 98: RUL = 59 cycles
+
+🟢 HEALTHY (55 engines) — Normal operation:
+  Engine 1: RUL = 112 cycles
+  Engine 2: RUL = 98 cycles
+  Engine 4: RUL = 82 cycles
+  Engine 5: RUL = 91 cycles
+  Engine 6: RUL = 93 cycles
+  Engine 7: RUL = 91 cycles
+  Engine 8: RUL = 95 cycles
+  Engine 9: RUL = 111 cycles
+  Engine 10: RUL = 96 cycles
+  Engine 11: RUL = 97 cycles
+  Engine 12: RUL = 124 cycles
+  Engine 13: RUL = 95 cycles
+  Engine 14: RUL = 107 cycles
+  Engine 15: RUL = 83 cycles
+  Engine 16: RUL = 84 cycles
+  Engine 19: RUL = 87 cycles
+  Engine 22: RUL = 111 cycles
+  Engine 23: RUL = 113 cycles
+  Engine 25: RUL = 145 cycles
+  Engine 26: RUL = 119 cycles
+  Engine 28: RUL = 97 cycles
+  Engine 29: RUL = 90 cycles
+  Engine 30: RUL = 115 cycles
+  Engine 33: RUL = 106 cycles
+  Engine 39: RUL = 142 cycles
+  Engine 44: RUL = 109 cycles
+  Engine 45: RUL = 114 cycles
+  Engine 47: RUL = 135 cycles
+  Engine 48: RUL = 92 cycles
+  Engine 51: RUL = 114 cycles
+  Engine 54: RUL = 97 cycles
+  Engine 55: RUL = 137 cycles
+  Engine 57: RUL = 103 cycles
+  Engine 59: RUL = 114 cycles
+  Engine 60: RUL = 100 cycles
+  Engine 65: RUL = 128 cycles
+  Engine 69: RUL = 121 cycles
+  Engine 70: RUL = 94 cycles
+  Engine 71: RUL = 118 cycles
+  Engine 73: RUL = 131 cycles
+  Engine 74: RUL = 126 cycles
+  Engine 75: RUL = 113 cycles
+  Engine 78: RUL = 107 cycles
+  Engine 80: RUL = 90 cycles
+  Engine 83: RUL = 137 cycles
+  Engine 85: RUL = 118 cycles
+  Engine 86: RUL = 89 cycles
+  Engine 87: RUL = 116 cycles
+  Engine 88: RUL = 115 cycles
+  Engine 89: RUL = 136 cycles
+  Engine 93: RUL = 85 cycles
+  Engine 95: RUL = 128 cycles
+  Engine 96: RUL = 137 cycles
+  Engine 97: RUL = 82 cycles
+  Engine 99: RUL = 117 cycles

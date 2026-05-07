@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+/* ===== NASA Design Tokens ===== */
+@theme {
+  --color-space-black: #000005;
+  --color-space-deep: #0a0a1a;
+  --color-space-surface: #0d1117;
+  --color-space-card: #111827;
+  --color-space-border: #1e293b;
+  --color-electric-blue: #00b4ff;
+  --color-electric-cyan: #00e5ff;
+  --color-sun-core: #ffa726;
+  --color-sun-glow: #ff6f00;
+  --color-nebula-purple: #7c3aed;
+  --color-nebula-pink: #ec4899;
+  --color-text-primary: #f0f4f8;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+  --font-display: "Orbitron", ui-sans-serif, sans-serif;
+  --font-body: "Space Grotesk", ui-sans-serif, sans-serif;
+}
+
+/* ===== Reset ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-space-black);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* ===== Gradient Text Utility ===== */
+.gradient-text-blue {
+  background: linear-gradient(135deg, #00b4ff 0%, #00e5ff 50%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-text-stat {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #000005; }
+::-webkit-scrollbar-thumb { background: #0080b3; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #00b4ff; }
+
+/* ===== Keyframes ===== */
+@keyframes nebula-pulse {
+  0%, 100% { opacity: 0.08; transform: scale(1); }
+  50% { opacity: 0.18; transform: scale(1.05); }
+}
+
+@keyframes sun-corona-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 30px rgba(255, 167, 38, 0.5),
+      0 0 60px rgba(255, 111, 0, 0.3),
+      0 0 100px rgba(255, 167, 38, 0.15);
+  }
+  50% {
+    box-shadow:
+      0 0 50px rgba(255, 167, 38, 0.7),
+      0 0 100px rgba(255, 111, 0, 0.45),
+      0 0 150px rgba(255, 167, 38, 0.25);
+  }
+}
+
+@keyframes orbit-glow {
+  0%, 100% { opacity: 0.06; }
+  50% { opacity: 0.12; }
+}
+
+/* ===== Glassmorphism ===== */
+.glass-card {
+  background: linear-gradient(135deg, rgba(13,17,23,0.75) 0%, rgba(10,10,26,0.55) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 180, 255, 0.08);
+  border-radius: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 180, 255, 0.2);
+  box-shadow: 0 8px 40px rgba(0, 180, 255, 0.06), inset 0 1px 0 rgba(255,255,255,0.04);
+  transform: translateY(-6px);
+}
+
+/* ===== Nebula BG ===== */
+.nebula-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.nebula-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  animation: nebula-pulse 12s ease-in-out infinite;
+}
+
+/* ===== Selection ===== */
+::selection {
+  background: rgba(0, 180, 255, 0.3);
+  color: #fff;
+}

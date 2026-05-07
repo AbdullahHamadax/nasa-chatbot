@@ -1,0 +1,36 @@
+ENGINE HEALTH REPORT — FD002 Dataset
+==================================================
+Engine ID      : 65
+Dataset        : FD002 (HPC Degradation)
+Op. Conditions : 6
+Cycles Recorded: 367
+RUL (Remaining): 11 cycles
+Health Status  : CRITICAL
+Risk Level     : CRITICAL
+
+SENSOR READINGS & TRENDS (Last 30 Cycles)
+--------------------------------------------------
+  Sensor  2 (T24        — Total temperature at LPC outlet): 537.22 °R | Trend: Declining ↓ ALERT (-3.5%)
+  Sensor  3 (T30        — Total temperature at HPC outlet): 1268.47 °R | Trend: Declining ↓ ALERT (-8.1%)
+  Sensor  4 (T50        — Total temperature at LPT outlet): 1060.82 °R | Trend: Declining ↓ ALERT (-7.0%)
+  Sensor  7 (P30        — Total pressure at HPC outlet): 174.72 psia | Trend: Declining ↓ ALERT (-9.8%)
+  Sensor  8 (Nf         — Physical fan speed): 1915.86 rpm | Trend: Declining ↓ ALERT (-13.8%)
+  Sensor  9 (Nc         — Physical core speed): 8043.89 rpm | Trend: Declining ↓ ALERT (-4.1%)
+  Sensor 11 (Ps30       — Static pressure at HPC outlet): 37.19 psia | Trend: Declining ↓ ALERT (-12.1%)
+  Sensor 12 (phi        — Ratio of fuel flow to Ps30): 164.63 pps/psi | Trend: Declining ↓ ALERT (-9.7%)
+  Sensor 13 (NRf        — Corrected fan speed): 2028.87 rpm | Trend: Declining ↓ ALERT (-15.1%)
+  Sensor 14 (NRc        — Corrected core speed): 7906.06 rpm | Trend: Declining ↓ (-2.3%)
+  Sensor 15 (BPR        — Bypass Ratio): 10.99 — | Trend: Rising ↑ ALERT (+17.1%)
+  Sensor 17 (htBleed    — Bleed Enthalpy): 311.00 — | Trend: Declining ↓ ALERT (-7.4%)
+  Sensor 20 (W31        — HPT coolant bleed): 14.29 lbm/s | Trend: Declining ↓ ALERT (-3.2%)
+  Sensor 21 (W32        — LPT coolant bleed): 8.50 lbm/s | Trend: Declining ↓ ALERT (-3.6%)
+
+⚠️  MAINTENANCE: IMMEDIATE inspection required!
+   Engine 65 will fail within 11 cycles.
+   Ground the engine and schedule full teardown.
+
+OPERATING CONDITIONS (Latest Cycle)
+--------------------------------------------------
+  Setting 1 (Altitude)               : 25.0041
+  Setting 2 (Mach Number)             : 0.6200
+  Setting 3 (Throttle Resolver Angle) : 60.0000
